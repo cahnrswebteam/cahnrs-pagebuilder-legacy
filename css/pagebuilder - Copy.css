@@ -1,0 +1,237 @@
+/** START LAYOUTS ******************/
+/*.pagbuilder-layout-full .pagebuilder-column{
+	display: block;
+}
+
+.pagbuilder-layout-aside .pagebuilder-column {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.pagbuilder-layout-aside .pagebuilder-column.pagebuilder-column-1 {
+	width: 75%;
+}
+
+.pagbuilder-layout-aside .pagebuilder-column.pagebuilder-column-2 {
+	width: 25%;
+}
+
+.pagbuilder-layout-aside.empty-aside .pagebuilder-column {
+	display: block;
+}
+
+.pagbuilder-layout-aside.empty-aside .pagebuilder-column.pagebuilder-column-1 {
+	display: block;
+	width: auto;
+}
+.pagbuilder-layout-aside.empty-aside .pagebuilder-column.pagebuilder-column-2 {
+	display: none;
+}
+
+.pagbuilder-layout-thirds .pagebuilder-column {
+	display: inline-block;
+	vertical-align: top;
+	width: 33.33%;
+}
+
+.pagbuilder-layout-fourths .pagebuilder-column {
+	display: inline-block;
+	vertical-align: top;
+	width: 25%;
+}*/
+/** BASIC ITEM STYLES **************************/
+.pagebuilder-column img {
+	max-width: 100% !important;
+	height: auto;
+}
+.pagebuilder-column iframe {
+	max-width: 100% !important;
+}
+
+.pagebuilder-column aside,
+.pagebuilder-column article {
+	display: block;
+	margin: 0 10px 20px 10px;
+}
+
+#pagebuilder-tertiary-nav {
+	margin: 0 1em;
+	border-bottom: 4px solid #fff;
+	/* PC adds/overrides */
+	border: none;
+}
+#pagebuilder-tertiary-nav a {
+	display: inline-block;
+	padding: 8px 20px;
+	border-right: 1px solid #ccc;
+	/* PC adds/overrides */
+	background: rgba( 255, 255, 255, 0.9 );
+	border: none;
+	margin-right: 1px;
+	padding: 0.5em 2em;
+}
+
+#pagebuilder-tertiary-nav a:not(.selected) {
+	/*background: #ddd; - PC */
+	color: inherit;
+	/* PC adds/overrides */
+	opacity: 0.8;
+}
+#pagebuilder-tertiary-nav a.selected {
+	/*background: #fff; - PC */
+	font-weight: bold;
+}
+
+/** CSS HOOKS **********************************/
+
+/* no-side-margin */
+.pagebuilder-column aside.no-side-margin,
+.pagebuilder-column article.no-side-margin {
+	margin: 0 0 20px 0;
+}
+
+/* no-bottom-margin */
+.pagebuilder-column aside.no-bottom-margin,
+.pagebuilder-column article.no-bottom-margin {
+	margin: 0 10px 0 10px;
+}
+
+/* no-margin */
+.pagebuilder-column aside.no-margin,
+.pagebuilder-column article.no-margin {
+	margin: 0;
+}
+
+
+/** From CAHNRS Spine Child ******************/
+
+/* I think this was me but can't remember why I added it - PC */
+.pagebuilder-layout {
+	margin-left: 1em;
+}
+
+.pagebuilder-layout,
+.layout-builder-wrap {/* LEGACY BUILDER LINE - DB */
+	margin-bottom: 2em !important;
+}
+
+.pagebuilder-column > article,
+.column > article,
+.pagebuilder-column > aside,
+.column > aside { /* LEGACY BUILDER LINE - DB */
+	background: rgba( 255, 255, 255, 0.9 );
+	border-radius: 1px;
+	margin: 0 1em 1em 2em;
+	padding: 1em 2em;
+}/* - PC
+.pagebuilder-column > aside,
+.column > aside {
+	background: rgba( 94, 106, 113, 0.9 );
+	border-radius: 1px;
+	color: #fff;
+	margin: 0 2em 1em 1em;
+	padding: 1em 2em;
+}*/
+
+/* LAYOUT BUILDER MODS - DB */
+.layout-builder-wrap {
+	margin: 0 0 0 1em;
+}
+.pagebuilder-layout .pagebuilder-column > article,
+.layout-builder-wrap .column > article { /* LEGACY BUILDER LINE - DB */
+	margin: 0 1em 1em;
+	padding: 1em 2em;
+}
+
+.pagebuilder-layout .pagebuilder-column > aside,
+.layout-builder-wrap .column > aside {/* LEGACY BUILDER LINE - DB */
+	margin: 0 1em 1em;
+	padding: 1em 2em;
+}
+
+/*** Slideshow Widget ***/
+.pagebuilder-layout .pagebuilder-column > aside.widget_CAHNRS_Slideshow_widget,
+.layout-builder-wrap aside.CAHNRS_Slideshow_widget { /* LEGACY BUILDER LINE - DB */
+	padding: 0;
+}
+/*** Custon Gallery widget ***/
+.pagebuilder-layout .pagebuilder-column > aside.widget_cahnrs_custom_gallery_widget {
+	background: rgba( 255, 255, 255, 0.9 );
+}
+/*** Custon Gallery widget ***/
+.pagebuilder-layout .pagebuilder-column > .widget_cahnrs_custom_gallery_widget .cc-excerpt a {
+	color: inherit;
+}
+
+/*** Directory Search widget ***/
+.pagebuilder-layout .pagebuilder-column > aside.widget_cahnrs_directory_search {
+	background: none;
+	padding: 0;
+}
+
+/*** Action Item widget ***/
+.pagebuilder-layout .pagebuilder-column > aside.widget_cahnrs_action_item {
+	background: none;
+	padding: 0;
+}
+
+/** End of stuff from CAHNRS Spine Child ******************/
+
+
+
+/** New stuff - PC *****************************/
+
+
+
+
+
+
+/* ## SMALL (max 693)  */
+@media only screen and (max-width: 693px) {
+	#pagebuilder-tertiary-nav {
+		margin: 0;
+	}
+	.pagebuilder-row > div {
+		width: 100% !important; /* Necessary in order to override inline styling */
+	}
+	.pagbuilder-layout-half > div > aside {
+		margin: 0 0 1em 0;
+	}
+
+
+
+	/** From CAHNRS Spine Child ******************/
+	.layout-builder-wrap {
+		margin: 0;
+	}
+	.layout-builder-wrap .column > article,
+	.layout-builder-wrap .column > aside {
+		margin: 0 0 2em 0;
+		padding: 1em;
+	}
+	
+	/* New - PC */
+	.pagebuilder-layout {
+		margin: 0;
+	}
+	.pagbuilder-layout-aside .pagebuilder-column {
+		width: 100% !important;
+	}
+	.pagebuilder-column > article,
+	.column > article,
+	.pagebuilder-column > aside,
+	.column > aside,
+	.pagebuilder-layout .pagebuilder-column > article,
+	.pagebuilder-layout .pagebuilder-column > aside {
+		margin: 0 0 1em;
+	}
+
+	.cahnrs-paging .wrapper {
+		margin: 0.5em 0 1em 0;
+	}
+	
+	/** End of stuff from CAHNRS Spine Child ******************/
+
+
+
+}

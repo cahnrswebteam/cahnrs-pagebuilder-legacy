@@ -1,0 +1,285 @@
+/**
+ * Basic item styles
+ * ----------------------------------------------------------------------------
+ */
+.pagebuilder-row {
+	position: relative;
+}
+.pagebuilder-column {
+	position: relative;
+}
+.pagebuilder-column img {
+	max-width: 100%;
+	height: auto;
+}
+.pagebuilder-column iframe {
+	max-width: 100% !important; 
+}
+#pagebuilder-force-first {
+	display: none;
+}
+/**
+ * Row Hooks
+ * ----------------------------------------------------------------------------
+ */
+.pagebuilder-row.white:before {
+	content: ' ';
+	position: absolute;
+	width: 300%;
+	background: #fff;
+	top: 0;
+	height: 100%;
+	left: -100%;
+}
+.pagebuilder-row.light-gray:before {
+	content: ' ';
+	position: absolute;
+	width: 300%;
+	background: #e7e9ea;
+	top: 0;
+	height: 100%;
+	left: -100%;
+}
+.pagebuilder-row.light-gray-down:before {
+	content: ' ';
+	position: absolute;
+	width: 300%;
+	top: 0;
+	height: 100%;
+	left: -100%;
+	background: -moz-linear-gradient(top,  rgba(238,238,238,1) 0%, rgba(125,185,232,0) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,1)), color-stop(100%,rgba(125,185,232,0)));
+	background: -webkit-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(125,185,232,0) 100%);
+	background: -o-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(125,185,232,0) 100%);
+	background: -ms-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(125,185,232,0) 100%);
+	background: linear-gradient(to bottom,  rgba(238,238,238,1) 0%,rgba(125,185,232,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#007db9e8',GradientType=0 );
+
+}
+
+/**
+ * Structure - widths
+ * ----------------------------------------------------------------------------
+ */
+.pagbuilder-layout-aside.pagebuilder-item .pagebuilder-column-1 {
+	width: 75%;
+}
+.pagbuilder-layout-aside.pagebuilder-item .pagebuilder-column-2 {
+	width: 25%;
+}
+.pagbuilder-layout-half .pagebuilder-column {
+	width: 50%;
+}
+.pagbuilder-layout-third-right .pagebuilder-column-1,
+.pagbuilder-layout-third-left .pagebuilder-column-2 {
+	width: 67%;
+}
+.pagbuilder-layout-third-left .pagebuilder-column-1,
+.pagbuilder-layout-third-right .pagebuilder-column-2 {
+	width: 33%;
+}
+.pagbuilder-layout-thirds .pagebuilder-column {
+	width: 33.33%;
+	width: calc(100% / 3);
+}
+.pagebuilder-column .pagebuilder-item,
+.pagebuilder-column {
+	display: block;
+}
+
+/**
+ * Structure - margins
+ * ----------------------------------------------------------------------------
+ */
+.cahnrs-dynamic-frame .cahnrs-dynamic-window > .pagebuilder-item,
+#cahnrs-dynamic-page-load {
+	margin: 0 1em 2em 2em;
+}
+.pagbuilder-layout-aside .pagebuilder-column-1 .pagebuilder-item,
+.pagbuilder-layout-third-right .pagebuilder-column-1 .pagebuilder-item {
+	margin-right: 2em;
+}
+.pagbuilder-layout-third-left .pagebuilder-column-2 .pagebuilder-item {
+	margin-left: 2em;
+}
+.pagbuilder-layout-half .pagebuilder-column-1 .pagebuilder-item,
+.pagbuilder-layout-thirds div:not(.pagebuilder-column-3) .pagebuilder-item,
+.pagbuilder-layout-fourths div:not(.pagebuilder-column-4) .pagebuilder-item {
+	margin-right: 1em;
+}
+.pagbuilder-layout-half .pagebuilder-column-2 .pagebuilder-item,
+.pagbuilder-layout-thirds div:not(.pagebuilder-column-1) .pagebuilder-item,
+.pagbuilder-layout-fourths div:not(.pagebuilder-column-1) .pagebuilder-item {
+	margin-left: 1em;
+}
+.pagebuilder-item:not(.widget_page_title) { 
+	margin-bottom: 1em;
+}
+
+/**
+ * Structure - padding
+ * ----------------------------------------------------------------------------
+ */
+.pagebuilder-layout {
+	padding-bottom: 1em;
+} 
+
+
+/**
+ * Float clearing (http://css-tricks.com/snippets/css/clear-fix/)
+ * ----------------------------------------------------------------------------
+ */
+.pagebuilder-row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/**
+ * Third Tier Navigtion (http://css-tricks.com/transformer-tabs/)
+ * ----------------------------------------------------------------------------
+ */
+/* Content */
+.pagebuilder-tertiary-page {
+	display: none;
+}
+.pagebuilder-tertiary-page.selected {
+	display: block;
+}
+/* Tabs */
+#pagebuilder-tertiary-nav {
+	overflow: hidden;
+}
+#pagebuilder-tertiary-nav ul {
+  list-style: none;
+  margin: 0;
+	padding: 0;
+	white-space: nowrap;
+}
+#pagebuilder-tertiary-nav li {
+  display: inline-block;
+	margin: 0;
+  padding: 0;
+  vertical-align: bottom;
+}
+#pagebuilder-tertiary-nav a {
+  background: rgba( 255, 255, 255, 0.9 );
+	border-top-left-radius: 1px;
+  border-top-right-radius: 1px;
+	color: #5e6a71;
+	display: inline-block;
+	font-weight: bold;
+	margin-right: 1px;
+	opacity: 0.8;
+	padding: 0.5em 2em;
+	position: relative;
+}
+#pagebuilder-tertiary-nav a:hover {
+	color: #981e32;
+}
+#pagebuilder-tertiary-nav li.selected a {
+  opacity: 1;
+  position: relative;
+}
+/* Drop-down for smaller screens */
+.size-small #pagebuilder-tertiary-nav {
+	margin-bottom: 1px;
+}
+.size-small #pagebuilder-tertiary-nav ul {
+	background: rgba( 255, 255, 255, 0.9 );
+	overflow: hidden;
+	position: relative;
+}
+.size-small #pagebuilder-tertiary-nav ul::after {
+	content: "\F501";
+	font-family: Spine-Icons;
+	pointer-events: none;
+	position: absolute;
+	right: 1em;
+	top: 0.5em;
+	z-index: 2;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing:  antialiased;
+}
+.size-small #pagebuilder-tertiary-nav ul:hover::after {
+	color: #981e32;
+}
+.size-small #pagebuilder-tertiary-nav ul.open::after {
+	color: #5e6a71;
+	content: "\F500";
+}
+.size-small #pagebuilder-tertiary-nav li {
+	display: block;
+}
+.size-small #pagebuilder-tertiary-nav a {
+	background: none;
+	color: #981e32;
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	width: calc( 100% - 4em );
+}
+.size-small #pagebuilder-tertiary-nav a:hover {
+	color: #c60c30;
+}
+.size-small #pagebuilder-tertiary-nav li.selected a {
+	color: #5e6a71;
+	opacity: 1;
+	z-index: 1;
+}
+.size-small #pagebuilder-tertiary-nav ul.open a {
+	display: block;
+	opacity: 1;
+	position: relative;
+}
+
+/**
+ * Media Queries
+ * ----------------------------------------------------------------------------
+ */
+ 
+/* Small (max 791px) */
+@media screen and (max-width: 791px) and (min-device-width: 990px), screen and (max-width: 791px) and (orientation: portrait) and (max-device-width: 420px), screen and (max-width: 791px) and (orientation: landscape) and (max-device-width: 480px) {
+
+	.cahnrs-dynamic-frame .cahnrs-dynamic-window > .pagebuilder-item,
+	#cahnrs-dynamic-page-load {
+		margin: 0 1em 2em 1em;
+	}
+
+}
+
+/* Small (max 693)	*/
+@media only screen and (max-width: 693px) {
+
+	.cahnrs-dynamic-frame .cahnrs-dynamic-window > .pagebuilder-item,
+	#cahnrs-dynamic-page-load {
+		margin: 0 0 2em 0;
+	}
+	.pagebuilder-row .pagebuilder-column {
+		float: none !important;
+		margin: 0;
+		width: 100% !important; /* Necessary in order to override inline styling */
+	}
+	.pagebuilder-item {
+		margin: 0 0 1em 0 !important; /* Sad, evidently necessary to override :not selector rules */
+		padding: 1em;
+	}
+
+}
+
+/* IOS fix for unshelved spine */
+@media only screen and (max-device-width: 480px) and (orientation: portrait), only screen and (max-device-width: 480px) and (orientation: landscape), only screen and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait), only screen and (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
+
+	.pagebuilder-row .pagebuilder-column {
+		margin: 0;
+		width: 100% !important; /* Necessary in order to override inline styling */
+	}
+	.pagebuilder-item {
+		margin: 0 0 1em 0 !important; /* Sad, evidently necessary to override :not selector rules */
+		padding: 1em;
+	}
+
+}
